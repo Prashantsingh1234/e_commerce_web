@@ -1,0 +1,74 @@
+<% layout('layouts/biolerplates') %>
+<%- include('../partials/navbar') %>
+<div class="row mx-auto ">
+    <form action="/Products" method="POST" class="needs-validation" novalidate >
+    <div class="mb-3 m-2">       
+        <label for="name">name :</label>
+        <input type="text" id="name"  class="form-control" name="name" placeholder="Name of the product" required>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+    </div>
+    <div class="mb-3 ">
+        <label for="price">Price :</label>
+        <input type="text" id="price"  class="form-control" name="price" placeholder="Price of the product" required>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please give price of product.
+          </div>
+    </div>
+    <div class="mb-3">
+        <label for="img">Image:</label>
+        <input type="text" id="img" class="form-control" name="img" placeholder="image url of the product" required>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please give a image URL
+          </div>
+    </div>
+    <div class="mb-3">
+        <label for="desc">Description :</label>
+        <textarea name="desc" class="form-control" id="desc" rows="5" placeholder="Description of the product" required></textarea><br/>
+        <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please give a description of product
+          </div>
+    </div>
+   
+   <button type="submit">Add Product</button>
+   </form>
+
+</div>
+<script>
+    // this is iife(imediately invoked function expression),Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
+
+</body>
+</html>

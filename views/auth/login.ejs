@@ -1,0 +1,27 @@
+<% layout('layouts/biolerplates') %>
+
+<div class="row">
+ <div class="col-lg-6 mx-auto">
+    <%- include('../partials/flash') %>
+
+    <h1 class="display-6">Login</h1>
+    <form action="/login" method="POST">
+        <div class="mb-3">
+            <label for="username" class="form-label" >Username :</label>
+            <input class="form-control" type="text" name="username" id="username">
+        </div>
+       
+        <div class="mb-3">
+            <label for="password" class="form-label" >Password :</label>
+            <input class="form-control" type="password" name="password" id="password">
+        </div>
+        <button type="submit" class="btn btn-sm btn-success">Login</button>
+    </form>
+    <p class="fw-light mb-3">Don't have account <a href="/register">Sign Up </a></p>
+ </div>
+          
+ 
+ 
+</div>
+
+

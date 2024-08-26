@@ -1,0 +1,44 @@
+<% layout('layouts/biolerplates') %>
+
+<div class="row">
+ <div class="col-lg-6 mx-auto">
+    <%- include('../partials/flash') %>
+
+    <h1 class="display-6">Sign Up</h1>
+    <form action="/register" method="POST">
+        <div class="mb-3">
+            <label for="username" class="form-label" >Username :</label>
+            <input class="form-control" type="text" name="username" id="username">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label" >Email :</label>
+            <input class="form-control" type="email" name="email" id="email">
+        </div>
+
+        <div class="mb-3">
+            <p class="mb-2">Want to register as?</p>
+            <div class="mx-2">
+                <label for="buyer" class="form-label" >Buyer :</label>
+                <input class="form-check-input" type="radio" value="buyer" name="role" id="buyer">
+            </div>
+            <div class="mx-2">
+                <label for="seller" class="form-label" > seller :</label>
+                <input class="form-check-input" type="radio"  value="seller" name="role" id="seller">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label" >Password :</label>
+            <input class="form-control" type="password" name="password" id="password">
+        </div>
+        <button type="submit" class="btn btn-sm btn-success">Sign Up</button>
+    </form>
+    <p class="fw-light mb-3">Already have account <a href="/login">Login </a></p>
+
+ </div>
+          
+ 
+ 
+</div>
+
+
